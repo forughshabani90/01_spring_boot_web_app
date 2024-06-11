@@ -6,13 +6,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Student {
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String firstname;
     private String lastname;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
@@ -22,20 +29,11 @@ public class Student {
         this.lastname = lastname;
     }
 
-
     public String getFirstname() {
         return firstname;
     }
 
     public String getLastname() {
         return lastname;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
     }
 }

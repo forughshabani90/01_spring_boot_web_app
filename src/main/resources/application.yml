@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc://localhost:5432/test
+    driver-class-name:
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+
